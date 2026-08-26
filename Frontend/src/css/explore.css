@@ -1,0 +1,483 @@
+.explore-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+
+/* =========================
+   EXPLORE HERO
+========================= */
+
+.explore-hero {
+    width: 100%;
+
+    background: #c9aa7d;
+
+    padding: 38px 20px 44px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0 auto;
+
+    width: 100%;
+}
+
+.search-bar {
+    width: 650px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #f8f5ef;
+
+    font-size: 16px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.search-bar:focus {
+    outline: 2px solid #c47c2b;
+}
+
+
+/* Smaller Search button */
+
+.filter-btn {
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3b2f28;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+    background: #5c2c13;
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   TRENDING SKILLS
+========================= */
+
+.trending-section {
+    background: #f8e8c8;
+
+    padding: 30px 36px 12px;
+}
+
+/* Heading + long line */
+
+.skills-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.skills-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    color: #3b2f28;
+
+    white-space: nowrap;
+}
+
+.skills-heading-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: #c47c2b;
+}
+
+
+/* =========================
+   SKILL CHIPS
+========================= */
+
+.skills-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    padding-left: 0;
+}
+.skill-chip {
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: none;
+
+    outline: none;
+
+    appearance: none;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        box-shadow 0.25s ease;
+
+    animation: skillAppear 0.45s ease-out both;
+}
+
+.skill-chip:focus,
+.skill-chip:focus-visible {
+    outline: none;
+    border: none;
+}
+
+.skill-chip:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    opacity: 0.95;
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.skill-chip.clicked {
+    animation: chipPop 0.4s ease-in-out;
+}
+
+.skill-chip:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+/* =========================
+   TRENDING COLOURS
+========================= */
+
+.skill-rust {
+    background: #b54a2a;
+}
+
+.skill-olive {
+    background: #5a7a3a;
+}
+
+.skill-blue {
+    background: #4a6e7a;
+}
+
+.skill-brown {
+    background: #8a5a2a;
+}
+
+
+/* =========================
+   SKILL ANIMATIONS
+========================= */
+
+@keyframes chipPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes skillAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.skill-chip:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-chip:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-chip:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-chip:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-chip:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-chip:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.skill-chip:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.skill-chip:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.skill-chip:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.skill-chip:nth-child(10) {
+    animation-delay: 1s;
+}
+
+
+/* =========================
+   STUDENT RESULTS
+========================= */
+
+.students-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+
+    width: calc(100% - 90px);
+
+    max-width: 1720px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    box-sizing: border-box;
+    
+}
+
+.student-card {
+    width: 100%;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #f8f5ef;
+
+    border-top: 5px solid #c47c2b;
+    border-left: 2px solid #d8c8b8;
+    border-right: 2px solid #d8c8b8;
+    border-bottom: 2px solid #d8c8b8;
+
+    border-radius: 22px;
+
+    padding: 28px 26px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 8px 20px rgba(59, 47, 40, 0.10);
+
+    transition: 0.3s ease;
+}
+.student-card button {
+    margin-top: auto;
+}
+.student-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 28px rgba(59, 47, 40, 0.16);
+}
+@keyframes studentPop {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.student-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.student-header h3 {
+    margin: 0;
+
+    font-size: 22px;
+
+    color: #3b2f28;
+}
+
+.student-meta {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 13px;
+
+    color: #8b6d57;
+}
+
+.student-avatar {
+    width: 48px;
+
+    height: 48px;
+
+    color: #c47c2b;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.student-card p {
+    margin-bottom: 10px;
+
+    color: #6b5648;
+
+    line-height: 1.5;
+}
+
+.student-card button {
+    
+
+    width: 100%;
+
+    border: none;
+
+    background: #c47c2b;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   PROFILE MODAL
+========================= */
+
+.profile-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.profile-modal {
+    width: 500px;
+
+    background: #f8f5ef;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

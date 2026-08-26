@@ -1,0 +1,158 @@
+.dashboard-navbar{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 20px;
+}
+
+.dashboard-logo{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-family:'Playfair Display', serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#3b2f28;
+}
+
+.dashboard-logo-circle{
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:#A98B76;
+
+    border:3px solid #3b2f28;
+}
+
+.dashboard-links{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+    margin-left:auto;
+
+    list-style:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#3b2f28;
+}
+
+.dashboard-links li{
+    cursor:pointer;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+.dashboard-links li:hover{
+    background:#BFA28C;
+}
+
+
+
+.dashboard-links a{
+    text-decoration:none;
+    color:#3b2f28;
+    font-weight:600;
+}
+
+.dashboard-links a:visited{
+    color:#3b2f28;
+}
+
+.dashboard-links a:hover{
+    color:#5a7a3a;
+}
+
+.dashboard-links li a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.dashboard-link-button {
+    border: none;
+    background: none;
+
+    font: inherit;
+    color: inherit;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.dashboard-link-button:hover {
+    color: #c47c2b;
+}
+
+
+.dashboard-login-btn {
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    background-color: var(--primary);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-login-btn:hover {
+    background-color: var(--secondary);
+
+    transform: translateY(-2px);
+}
+
+
+.dashboard-profile {
+    border: none;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+
+    color: #3b2f28;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-profile:hover {
+    transform: translateY(-2px);
+    background-color: var(--secondary);
+}

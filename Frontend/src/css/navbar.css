@@ -1,0 +1,126 @@
+.navbar {
+    height: 88px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background-color: var(--light);
+    border-bottom: 4px solid #3b2f28;
+
+    box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #3b2f28;
+}
+
+.logo-circle {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+
+    border: 3px solid #3b2f28;
+}
+
+
+/* NAVIGATION */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+
+    color: #3b2f28;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: 0.25s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--primary);
+}
+
+
+/* LOGIN / PROFILE */
+
+.login-btn {
+    border: none;
+
+    padding: 10px 25px;
+
+    border-radius: 12px;
+
+    background-color: var(--primary);
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--secondary);
+
+    transform: translateY(-2px);
+}
+
+
+/* Dashboard navbar */
+
+.dashboard-navbar {
+    border-bottom: 4px solid #512f1b;
+}
+.navbar-link-button {
+    border: none;
+    background: none;
+    padding: 0;
+
+    color: #3b2f28;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.navbar-link-button:hover {
+    color: var(--primary);
+}

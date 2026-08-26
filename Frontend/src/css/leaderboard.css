@@ -1,0 +1,1004 @@
+.leaderboard-page{
+    padding:5px 70px 40px;
+}
+
+.leaderboard-subtitle{
+    text-align:center;
+    color:#8a5a2a;
+    font-size:18px;
+    font-weight: 800px;
+    margin-bottom:10px;
+    position:relative;
+}
+
+.leaderboard-subtitle::after{
+    content:"";
+
+    display:block;
+
+    width:140px;
+    height:2px;
+
+    background:#d8c4a3;
+
+    margin:5px auto 0;
+}
+
+/* PODIUM */
+
+.podium{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:35px;
+}
+
+.podium-user{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.first{
+    order:2;
+}
+
+.second{
+    order:1;
+}
+
+.third{
+    order:3;
+}
+
+.leaderboard-name{
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.podium-score{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#5a6a3a;;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.podium-base{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:50px;
+    font-weight:700;
+    margin-bottom: 0;
+    border-radius:16px 16px 0 0;
+}
+
+
+.first-place{
+    width:180px;
+    height:150px;
+    background:#8a5a2a;
+}
+
+.second-place{
+    width:170px;
+    height:110px;
+    background:#b08d57;
+}
+
+.third-place{
+    width:170px;
+    height:90px;
+    background:#d0b07a;
+}
+
+.first-avatar{
+    background:#d4af37;
+     width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.second-avatar{
+    background:#c0c0c0;
+     width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.third-avatar{
+    background:#cd7f32;
+     width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.podium-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.podium{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:30px;
+
+    margin-bottom:0; /* important */
+}
+
+.podium-floor{
+    width:700px;
+    height:10px;
+
+    background:#d8c6a7;
+
+    border-radius:20px;
+
+    margin-top:0;
+    margin-bottom: 40px;
+    margin-left: 212px;
+}
+
+/* RANKINGS */
+
+.leaderboard-card{
+    width:95%;
+    margin:auto;
+
+    background:white;
+
+    border:3px solid #8a5a2a;
+
+    border-radius:25px;
+
+    overflow:hidden;
+    margin-top: 0;
+    margin-bottom:80px;
+}
+
+.ranking-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 35px;
+
+    border-bottom:1px solid #e6e6e6;
+}
+
+.ranking-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.rank-number{
+    color:#8a5a2a;
+    font-weight:700;
+    font-size:22px;
+}
+
+.ranking-left span:last-child{
+    font-size:22px;
+}
+
+.ranking-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#5a6a3a;;
+
+    font-size:22px;
+    font-weight:800;
+}
+
+.rank-avatar{
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#8a5a2a;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:15px;
+    font-weight:700;
+}
+
+/* ACHIEVEMENTS */
+
+/* PAGE */
+
+.achievements-page{
+    padding:20px 70px 50px;
+}
+
+/* HEADING */
+
+.achievement-heading{
+    color:#8a5a2a;
+
+    font-size:18px;
+    font-weight:700;
+
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.achievements-heading{
+    color:#8a5a2a;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+/* XP CARD */
+
+.xp-card{
+    background:#f8f6f2;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    margin-bottom:25px;
+}
+
+.xp-icon{
+    width:72px;
+    height:72px;
+
+    background:#8a5a2a;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+}
+
+.xp-content{
+    flex:1;
+}
+
+.xp-content h2{
+    color:#2d241c;
+
+    font-size:18px;
+    font-weight:700;
+
+    margin-bottom:6px;
+}
+
+.xp-content p{
+    color:#8a5a2a;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+}
+
+/* PROGRESS BAR */
+
+.xp-bar{
+    width:100%;
+    height:10px;
+
+    background:#e5ddd0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.xp-fill{
+    height:100%;
+
+    background:#c98528;
+
+    border-radius:20px;
+}
+
+.xp-numbers{
+    display:flex;
+    justify-content:space-between;
+
+    margin-top:8px;
+
+    color:#8a5a2a;
+    font-weight:600;
+}
+
+/* ACHIEVEMENT CARD */
+
+.achievement-list{
+    border:3px solid #8a5a2a;
+    border-radius:24px;
+    overflow:hidden;
+    background:white;
+}
+
+/* ROW */
+
+.achievement-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 28px;
+    border-bottom:1px solid #ebe5db;
+}
+
+.achievement-row:last-child{
+    border-bottom:none;
+}
+
+/* LEFT */
+
+.achievement-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    font-size:18px;
+}
+
+.achievement-left svg{
+    color:#8a5a2a;
+}
+
+/* RIGHT */
+
+.achievement-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    font-size:20px;
+    font-weight:600;
+}
+
+/* COMPLETED */
+
+.completed{
+    color:#5f8d4e;
+}
+
+/* IN PROGRESS */
+
+.progress{
+    color:#c98528;
+}
+
+/* LOCKED */
+
+.locked{
+    color:#bfb3a1;
+}
+
+/* PROGRESS COUNT */
+
+.progress-count{
+    color:#c98528;
+    font-size:18px;
+    margin-left:8px;
+}
+
+/* XP */
+
+.xp-reward{
+    min-width:90px;
+    text-align:right;
+}
+
+/* BADGE SHELF */
+
+.badges-section{
+    margin-top:40px;
+}
+
+.badges-title{
+    color:#8a5a2a;
+    font-size:30px;
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.badges-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.badge-card{
+    background:#f8f6f2;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.badge-icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.badge-name{
+    color:#8a5a2a;
+    font-weight:600;
+}
+
+.badge-locked{
+    filter:grayscale(100%);
+    opacity:0.55;
+}
+
+.achievement-icon-box{
+    width:52px;
+    height:52px;
+
+    background:#8a5a2a;
+
+    border-radius:14px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    flex-shrink:0;
+}
+
+.locked .achievement-icon-box {
+    background: transparent;
+    color: #8a5a2a;
+    border: 1px solid #8a5a2a;
+}
+
+.achievement-icon-box svg {
+    width: 24px;
+    height: 24px;
+
+    stroke: currentColor;
+
+    stroke-width: 2.2;
+}
+
+/* =========================================
+   NEW LEADERBOARD RANK CARDS
+   ========================================= */
+
+.leaderboard-card {
+    width: 100%;
+    margin: 0 auto 70px;
+
+    background: transparent;
+
+    border: none;
+
+    overflow: visible;
+}
+
+
+/* Each rank gets its own card */
+
+.ranking-row {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 24px;
+
+    margin-bottom: 12px;
+
+    background: #f8f6f2;
+
+    border: 1.5px solid #d8c8b8;
+
+    border-radius: 18px;
+
+    transition: 0.25s ease;
+}
+
+.ranking-row:hover {
+    transform: translateY(-2px);
+
+    border-color: #8a5a2a;
+
+    box-shadow:
+        0 6px 16px rgba(138,90,42,0.10);
+}
+
+
+/* LEFT SIDE */
+
+.ranking-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* Rank number */
+
+.rank-number {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eee3ce;
+
+    color: #8a5a2a;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* Avatar */
+
+.rank-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #89451d;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* Name */
+
+.ranking-left span:last-child {
+    font-size: 19px;
+
+    color: #2d241c;
+}
+
+
+/* Score */
+
+.ranking-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5a7a3a;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+/* =========================================
+   LEVEL / XP SECTION
+   ========================================= */
+
+.xp-card {
+    background: #f8f6f2;
+
+    border-radius: 24px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid #e3d7c5;
+}
+
+
+/* Circular XP ring */
+
+.xp-ring {
+
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background:
+        conic-gradient(
+            #c47c2b 0deg 259deg,
+            #e5ddd0 259deg 360deg
+        );
+
+    position: relative;
+}
+
+
+/* Inner circle */
+
+.xp-ring-inner {
+
+    width: 83px;
+    height: 83px;
+
+    border-radius: 50%;
+
+    background: #f8f6f2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Level number */
+
+.xp-ring-inner span {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    color: #3b2f28;
+
+    font-weight: 500;
+}
+
+
+/* XP text */
+
+.xp-content {
+    flex: 1;
+}
+
+.xp-content h2 {
+
+    color: #2d241c;
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+}
+
+.xp-content p {
+
+    color: #8a5a2a;
+
+    font-size: 16px;
+
+    margin: 0;
+}
+
+/* =========================================
+   ACHIEVEMENTS
+   ========================================= */
+
+.achievement-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    border: none;
+
+    background: transparent;
+
+    overflow: visible;
+
+}
+
+
+/* Base achievement card */
+
+.achievement-row {
+
+    min-height: 100px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 22px;
+
+    border-radius: 18px;
+
+    margin: 0;
+
+    border: 2px dashed #8a5a2a;
+
+    background: transparent;
+
+    transition: 0.25s ease;
+}
+
+
+/* =========================================
+   UNLOCKED
+   ========================================= */
+
+.achievement-row.unlocked {
+
+    background: #8a5a2a;
+
+    border: 2px solid #8a5a2a;
+
+    color: white;
+}
+
+.achievement-row.unlocked:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(138,90,42,0.20);
+}
+
+
+/* Unlocked icon */
+
+.achievement-row.unlocked
+.achievement-icon-box {
+
+    background: #6f461f;
+
+    color: white;
+}
+
+
+/* Unlocked title */
+
+.achievement-row.unlocked
+.achievement-left {
+
+    color: white;
+}
+
+
+/* Unlocked XP */
+
+.achievement-row.unlocked
+.achievement-right {
+
+    color: white;
+}
+
+
+/* =========================================
+   IN PROGRESS
+   ========================================= */
+
+.achievement-row.in-progress {
+
+    border: 2px dashed #8a5a2a;
+
+    background: #f8f6f2;
+}
+
+.achievement-row.in-progress:hover {
+
+    transform: translateY(-3px);
+
+    background: #f4eee5;
+}
+
+
+/* =========================================
+   LOCKED
+   ========================================= */
+
+.achievement-row.locked-achievement {
+
+    border: 2px dashed #8a5a2a;
+
+    background: transparent;
+
+    color: #b9ad9d;
+}
+
+.achievement-row.locked-achievement:hover {
+
+    background: #f4eee5;
+}
+
+
+/* Locked icon */
+
+.achievement-row.locked-achievement
+.achievement-icon-box {
+
+    background: transparent;
+
+    border: 1px solid #8a5a2a;
+
+    color: #8a5a2a;
+}
+
+
+/* Locked SVG */
+
+.achievement-row.locked-achievement
+.achievement-icon-box svg {
+
+    stroke: #8a5a2a;
+}
+
+
+/* =========================================
+   ACHIEVEMENT CONTENT
+   ========================================= */
+
+.achievement-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+.achievement-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* Icon box */
+
+.achievement-icon-box {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* Progress */
+
+.achievement-row.in-progress
+.progress-count {
+
+    color: #c47c2b;
+
+    font-weight: 700;
+}
+
+
+/* Locked text */
+
+.locked-achievement .achievement-left span {
+
+    color: #a99b89;
+}
+
+.locked-achievement .achievement-right {
+
+    color: #a99b89;
+}

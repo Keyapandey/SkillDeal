@@ -1,0 +1,425 @@
+.hero{
+    height:calc(100vh - 94px);
+    min-height:600px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:#c9aa7f;
+
+    color:#3b2f28;
+
+    box-sizing:border-box;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* HERO TITLE */
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+
+    color:#3b2f28;
+
+    font-size:100px;
+
+    font-weight:700;
+
+    margin:0 0 18px;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* TAGLINE */
+
+.hero-tagline{
+    font-family:'Playfair Display', serif;
+
+    color:#6b5648;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    font-style:italic;
+
+    margin:0 0 12px;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* SUBTITLE */
+
+.hero-subtitle{
+    font-family:'Inter', sans-serif;
+
+    color:#3b2f28;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    margin:0 0 35px;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* GET STARTED */
+
+.hero button{
+    background:#c96f2d;
+
+    color:white;
+
+    border:none;
+
+    padding:17px 42px;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    position:relative;
+    z-index:2;
+
+    box-shadow:0 12px 25px rgba(59,47,40,0.18);
+}
+
+.hero button:hover{
+    background:#b85f24;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 30px rgba(59,47,40,0.25);
+}
+
+
+/* =========================
+   DECORATIVE CIRCLES
+   ========================= */
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    background:#8da35d;
+
+    top:-160px;
+    left:-90px;
+}
+
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    border-radius:50%;
+
+    background:#df7135;
+
+    right:-80px;
+    bottom:-130px;
+}
+
+
+/* =========================
+   DECORATIVE CIRCLES
+   ========================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: #8ba25d;
+
+    left: -60px;
+    top: -55px;
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: #d9743d;
+
+    right: -45px;
+    bottom: -80px;
+}
+
+
+/* SMALL DECORATIVE DOTS */
+
+.hero {
+    isolation: isolate;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   MAIN HEADING
+   ========================= */
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    color: #3b2f28;
+
+    font-size: 64px;
+    font-weight: 700;
+
+    margin: 0 0 12px;
+}
+
+
+/* =========================
+   TAGLINE
+   ========================= */
+
+.hero-tagline {
+    font-family: 'Playfair Display', serif;
+
+    color: #6b5541;
+
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 500;
+
+    margin: 0 0 8px;
+}
+
+
+/* =========================
+   SUBTITLE
+   ========================= */
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+
+    color: #3b2f28;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    margin: 0 0 32px;
+}
+
+
+/* =========================
+   GET STARTED
+   ========================= */
+
+.hero button {
+    background: #c96f32;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 44px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 22px rgba(59, 47, 40, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.hero button:hover {
+    background: #b95f27;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 28px rgba(59, 47, 40, 0.22);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 65vh;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-tagline {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero::before {
+        width: 170px;
+        height: 170px;
+
+        left: -70px;
+        top: -40px;
+    }
+
+    .hero::after {
+        width: 190px;
+        height: 190px;
+
+        right: -70px;
+        bottom: -60px;
+    }
+}
+
+/* =========================
+   FLOATING SKILLS
+   ========================= */
+
+.hero-skills{
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+
+/* Individual skill tags */
+
+.floating-skill{
+    position:absolute;
+
+    padding:7px 16px;
+
+    border-radius:20px;
+
+    font-family:"Inter", sans-serif;
+
+    font-size:14px;
+
+    white-space:nowrap;
+}
+
+
+/* Dark brown tags */
+
+.skill-1,
+.skill-4,
+.skill-5{
+    background:#3b2f28;
+
+    color:#f8f5ef;
+}
+
+
+/* Cream tags */
+
+.skill-2,
+.skill-3,
+.skill-6{
+    background:#f8f5ef;
+
+    color:#3b2f28;
+}
+
+
+/* =========================
+   POSITIONS
+   ========================= */
+
+.skill-1{
+    top:8%;
+
+    left:7%;
+}
+
+
+.skill-2{
+    top:10%;
+
+    right:8%;
+}
+
+
+.skill-3{
+    top:30%;
+
+    left:14%;
+}
+
+
+.skill-4{
+    top:40%;
+
+    right:7%;
+}
+
+
+.skill-5{
+    top:53%;
+
+    right:17%;
+}
+
+
+.skill-6{
+    top:63%;
+
+    left:11%;
+}

@@ -1,0 +1,154 @@
+generator client {
+  provider = "prisma-client-js"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  college   String
+  year      Int
+  branch    String
+  email     String   @unique
+  password  String
+  about     String?
+  linkedin  String?
+  github    String?
+  instagram String?
+  xp    Int @default(0)
+  level Int @default(1)
+  streak Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  skills UserSkill[]
+  achievements UserAchievement[]
+
+  sentRequests     ExchangeRequest[] @relation("SentRequests")
+  receivedRequests ExchangeRequest[] @relation("ReceivedRequests")
+  sentExchanges     Exchange[] @relation("SenderExchanges")
+  receivedExchanges Exchange[] @relation("ReceiverExchanges")
+  sentMessages     Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+}
+
+model Skill {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  users UserSkill[]
+}
+model UserSkill {
+  id      Int    @id @default(autoincrement())
+  userId  Int
+  skillId Int
+  type    SkillType
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, skillId, type])
+}
+
+enum SkillType {
+  TEACH
+  LEARN
+}
+
+model ExchangeRequest {
+  id         Int      @id @default(autoincrement())
+  senderId   Int
+  receiverId Int
+  status     RequestStatus @default(PENDING)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  sender   User @relation("SentRequests", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("ReceivedRequests", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  exchange Exchange?
+  
+  @@index([senderId])
+  @@index([receiverId])
+}
+
+enum RequestStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+}
+
+model Exchange {
+  id               Int      @id @default(autoincrement())
+  requestId        Int      @unique
+  senderId         Int
+  receiverId       Int
+  status           ExchangeStatus @default(ACTIVE)
+
+  startedAt        DateTime @default(now())
+  scheduledAt      DateTime?
+  sessionStartedAt DateTime?
+  sessionEndedAt   DateTime?
+  completedAt      DateTime?
+
+  request  ExchangeRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  sender   User @relation("SenderExchanges", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("ReceiverExchanges", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([senderId])
+  @@index([receiverId])
+}
+
+enum ExchangeStatus {
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  senderId   Int
+  receiverId Int
+  content    String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  sender   User @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("ReceivedMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@index([senderId])
+  @@index([receiverId])
+}
+
+model Achievement {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String
+  xpReward    Int
+  requirement String
+
+  users UserAchievement[]
+
+  createdAt DateTime @default(now())
+}
+
+model UserAchievement {
+  id            Int      @id @default(autoincrement())
+  userId        Int
+  achievementId Int
+  unlockedAt    DateTime @default(now())
+
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+  @@index([achievementId])
+}

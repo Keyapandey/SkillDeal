@@ -1,0 +1,51 @@
+.signup-modal{
+    width:450px;
+
+    background:#f8f5ef;
+
+    border:2px solid #A98B76;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    position:relative;
+}
+
+.signup-modal h2{
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-family:'Playfair Display', serif;
+
+    color:#3b2f28;
+}
+
+.signup-modal input{
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:14px;
+
+    border:1px solid #BFA28C;
+
+    border-radius:12px;
+}
+
+.signup-btn{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#A98B76;
+
+    color:white;
+
+    cursor:pointer;
+}

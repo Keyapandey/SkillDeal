@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap');
+:root{
+  --primary:#A98B76;
+  --secondary:#BFA28C;
+  --light:#F3E4C9;
+  --accent:#BABF94;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Segoe UI", sans-serif;
+  background-color:var(--light);
+  color:#3b2f28;
+}

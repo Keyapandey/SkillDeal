@@ -1,0 +1,130 @@
+.auth-prompt-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+}
+
+.auth-prompt {
+    position: relative;
+
+    width: 420px;
+    max-width: 90%;
+
+    background: #f8f5ef;
+
+    border-radius: 24px;
+
+    padding: 36px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    animation: authPromptPop 0.25s ease-out;
+}
+
+@keyframes authPromptPop {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.auth-prompt-close {
+    position: absolute;
+
+    top: 14px;
+    right: 16px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 26px;
+
+    color: #6b5648;
+
+    cursor: pointer;
+}
+
+.auth-prompt-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #c47c2b;
+    color: white;
+
+    font-size: 25px;
+}
+
+.auth-prompt h2 {
+    margin: 0 0 12px;
+
+    color: #3b2f28;
+
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.auth-prompt p {
+    margin: 0 auto 26px;
+
+    max-width: 340px;
+
+    color: #6b5648;
+
+    line-height: 1.6;
+}
+
+.auth-prompt-primary {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #c47c2b;
+    color: white;
+
+    font-weight: 600;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.auth-prompt-primary:hover {
+    opacity: 0.9;
+}
+
+.auth-prompt-login {
+    margin-top: 14px;
+
+    border: none;
+    background: transparent;
+
+    color: #8a5a2a;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}

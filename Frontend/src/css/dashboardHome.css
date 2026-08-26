@@ -1,0 +1,523 @@
+/* =========================================
+   DASHBOARD HERO
+========================================= */
+
+.dashboard-hero {
+    min-height: 480px;
+
+    position: relative;
+
+    background: #c9aa7f;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.dashboard-hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 90%;
+    max-width: 1100px;
+}
+
+
+.dashboard-hero-content h1 {
+    margin: 0 0 12px;
+
+    color: #3b2f28;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+.dashboard-hero-subtitle {
+    margin: 0 auto 35px;
+
+    color: #5f5246;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+.dashboard-hero-subtitle span {
+    margin: 0 12px;
+
+    color: #8a6d58;
+}
+
+
+/* =========================================
+   OFFER / WANT BOXES
+========================================= */
+
+.skill-exchange-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.skill-choice {
+    width: 290px;
+
+    min-height: 125px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #f8f5ef;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    box-shadow:
+        0 10px 25px rgba(59, 47, 40, 0.12);
+
+    transition: transform 0.25s ease;
+}
+
+
+.skill-choice:hover {
+    transform: translateY(-4px);
+}
+
+
+.skill-choice span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.skill-choice p {
+    margin: 0;
+
+    color: #8b6d57;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* OFFER */
+
+.skill-choice.offer {
+    border-top: 5px solid #5a7a3a;
+}
+
+
+.skill-choice.offer span {
+    color: #5a7a3a;
+}
+
+
+/* WANT */
+
+.skill-choice.want {
+    border-top: 5px solid #c47c2b;
+}
+
+
+.skill-choice.want span {
+    color: #c47c2b;
+}
+
+
+/* =========================================
+   EXCHANGE SYMBOL
+========================================= */
+
+.exchange-symbol {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #3b2f28;
+
+    color: #f8f5ef;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 8px 18px rgba(59, 47, 40, 0.18);
+}
+
+
+/* =========================================
+   FLOATING SKILL NAMES
+========================================= */
+
+.skill-pill {
+    position: absolute;
+
+    z-index: 2;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation-name: floatSkill;
+
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+}
+
+
+/*
+   Each skill starts at a different place
+   and has a different speed/delay.
+*/
+
+.pill-1 {
+    left: 8%;
+    bottom: -30px;
+
+    background: #3b2f28;
+    color: #f8f5ef;
+
+    animation-duration: 8s;
+    animation-delay: -2s;
+}
+
+
+.pill-2 {
+    left: 25%;
+    bottom: -30px;
+
+    background: #f8f5ef;
+    color: #3b2f28;
+
+    animation-duration: 10s;
+    animation-delay: -6s;
+}
+
+
+.pill-3 {
+    left: 45%;
+    bottom: -30px;
+
+    background: #5a7a3a;
+    color: white;
+
+    animation-duration: 9s;
+    animation-delay: -4s;
+}
+
+
+.pill-4 {
+    left: 68%;
+    bottom: -30px;
+
+    background: #c47c2b;
+    color: white;
+
+    animation-duration: 11s;
+    animation-delay: -8s;
+}
+
+
+.pill-5 {
+    left: 87%;
+    bottom: -30px;
+
+    background: #f8f5ef;
+    color: #3b2f28;
+
+    animation-duration: 8.5s;
+    animation-delay: -5s;
+}
+
+.pill-6 {
+    left: 87%;
+    bottom: -30px;
+
+    background: #f8f5ef;
+    color: #3b2f28;
+
+    animation-duration: 8.5s;
+    animation-delay: -5s;
+}
+
+.pill-7 {
+    left: 23%;
+    bottom: -30px;
+
+    background: #f8f5ef;
+    color: #5a7a3a;
+
+    animation-duration: 8.5s;
+    animation-delay: -1s;
+}
+
+
+/* =========================================
+   BOTTOM → TOP FLOAT
+========================================= */
+
+@keyframes floatSkill {
+
+    0% {
+        transform: translateY(0);
+
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-560px);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   DEAL OF THE DAY
+========================================= */
+
+.deal-section {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 55px auto 20px;
+}
+
+
+.deal-section h2 {
+    margin-bottom: 18px;
+
+    color: #9c7446;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.deal-card {
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 22px 28px;
+
+    box-sizing: border-box;
+
+    background: #f8f5ef;
+
+    border-left: 2px solid #d8c8b8;
+    border-right: 2px solid #d8c8b8;
+
+    border-top: 4px solid #c47c2b;
+    border-bottom: 4px solid #c47c2b;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.06);
+
+    transition: 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.09);
+}
+
+
+.deal-avatar {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #d8c29c;
+
+    color: #3b2f28;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+.deal-content p {
+    margin: 0 0 8px;
+
+    color: #3b2f28;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+.deal-content > span {
+    color: #8b6d57;
+
+    font-size: 13px;
+}
+
+
+.deal-arrow {
+    color: #c47c2b;
+
+    font-size: 22px;
+
+    margin: 0 7px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-hero {
+        min-height: 600px;
+
+        padding: 40px 20px;
+    }
+
+
+    .dashboard-hero-content h1 {
+        font-size: 42px;
+    }
+
+
+    .skill-exchange-box {
+        flex-direction: column;
+    }
+
+
+    .skill-choice {
+        width: min(90%, 330px);
+    }
+
+
+    .exchange-symbol {
+        transform: rotate(90deg);
+    }
+
+
+    .deal-card {
+        padding: 18px;
+
+        gap: 15px;
+    }
+
+}
+
+
+.dashboard-hero::after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+    left: -5%;
+
+    width: 110%;
+    height: 45px;
+
+    background: #f8e8c8;
+
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+    z-index: 10;
+}

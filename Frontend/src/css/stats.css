@@ -1,0 +1,43 @@
+.stats-banner{
+    margin:70px auto 0;
+    padding-top:10px;
+
+    border-top:2px solid #A98B76;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    width:98%;
+    margin:50px auto 0;
+}
+
+.stat-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.stat-item h2{
+    font-family:'Playfair Display', serif;
+
+    font-size:42px;
+
+    color:#3b2f28;
+
+    margin:0;
+}
+
+.stat-item p{
+    margin:0;
+
+    font-size:20px;
+
+    color:#6b5648;
+
+    font-weight:600;
+}

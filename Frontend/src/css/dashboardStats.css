@@ -1,0 +1,138 @@
+.dashboard-stats-section{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:92%;
+
+    margin:40px auto;
+
+    gap:20px;
+}
+
+.dashboard-card{
+    flex:1;
+    max-width:260px;
+
+    height:135px;
+
+    padding:16px 20px;
+
+    border-radius:22px;
+
+    background:#f8f5ef;
+
+    border-left:2px solid #b6c69b;
+    border-right:2px solid #b6c69b;
+    border-bottom:2px solid #b6c69b;
+    border-top:5px solid #5a7a3a;
+
+    position:relative;
+
+    box-shadow:
+    0 8px 20px rgba(90,122,58,0.12);
+
+    transition:0.3s ease;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+}
+
+.dashboard-card h2{
+    margin:0;
+
+    font-size:42px;
+
+    line-height:1;
+
+    font-family:'Playfair Display', serif;
+
+    color:#5a7a3a;
+}
+
+.dashboard-card p{
+    margin-top:4px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#8a6b45;
+}
+
+.card-change{
+    display:block;
+
+    margin-top:16px;
+
+    color:#5a7a3a;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.card-icon{
+    position:absolute;
+
+    top:12px;
+    right:16px;
+
+    width:52px;
+    height:52px;
+
+    color:#28410f;
+
+    opacity:0.12;
+}
+
+.card-change{
+    display:block;
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    color:#5a7a3a;
+
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+    .dashboard-stats-section{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+
+        width:95%;
+        margin:25px auto;
+    }
+
+    .dashboard-card{
+        max-width:none;
+        width:100%;
+        height:auto;
+
+        min-height:120px;
+
+        box-sizing:border-box;
+    }
+
+    .dashboard-card h2{
+        font-size:34px;
+    }
+
+    .dashboard-card p{
+        font-size:14px;
+    }
+
+}
+
