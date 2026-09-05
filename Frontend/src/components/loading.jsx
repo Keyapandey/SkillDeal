@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './loading.css';
 
 const messages = [
   "Waking up the server... it's an early riser, just not that early 🌅",
@@ -20,6 +21,11 @@ function Loading() {
 
   return (
     <div className="loading-container">
+      <div className="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <p className="loading-message">{messages[messageIndex]}</p>
     </div>
   );
