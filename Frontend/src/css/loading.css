@@ -1,0 +1,20 @@
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-message {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #6B4226; /* dark brown */
+  font-size: 1.1rem;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

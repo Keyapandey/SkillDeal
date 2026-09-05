@@ -4,6 +4,7 @@ import { UserCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import AuthPrompt from "../components/AuthPrompt";
+import Loading from "../components/loading";
 
 import {
   getAllSkills,
@@ -23,6 +24,7 @@ function Explore() {
   const [showProfile, setShowProfile] = useState(false);
   const [clickedSkill, setClickedSkill] = useState(null);
   const [showAuthPrompt, setShowAuthPrompt] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -43,7 +45,9 @@ function Explore() {
           "Failed to fetch explore data:",
           error
         );
+        } finally {
 
+      setIsLoading(false);
       }
 
     };
@@ -167,11 +171,16 @@ function Explore() {
   } catch (error) {
     alert(error.message);
   }
+}
 };
 
   return (
+<>
 
-    <>
+    {isLoading ? (
+      <Loading />
+    ) : (
+      <>
 
       <DashboardNavbar />
 
@@ -529,12 +538,10 @@ function Explore() {
         )}
 
       </section>
-
-    </>
-
+</>
+    )}
+  </>
   );
-
-}
 
 
 export default Explore;

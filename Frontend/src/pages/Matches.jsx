@@ -4,7 +4,8 @@ import { getMatches,getGuestMatches } from "../api/match";
 import "../css/matches.css";
 import { useEffect,useState } from "react";
 import AuthPrompt from "../components/AuthPrompt";
-import { useNavigate } from "react-router-dom";   // 👈 import
+import { useNavigate } from "react-router-dom";   
+import Loading from "../components/loading";
 
 function Matches() {
    const navigate = useNavigate();
@@ -13,6 +14,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 const [action, setAction] = useState(null);
 const [showAuthPrompt, setShowAuthPrompt] = useState(false);
 const [guestSwipeCount, setGuestSwipeCount] = useState(0);
+const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -30,6 +32,8 @@ const [guestSwipeCount, setGuestSwipeCount] = useState(0);
 
     } catch (error) {
       console.error("Failed to fetch matches:", error);
+    }finally {
+      setIsLoading(false);
     }
   };
 
@@ -80,6 +84,9 @@ const [guestSwipeCount, setGuestSwipeCount] = useState(0);
     alert(error.message);
   }
 };
+if (isLoading) {
+  return <Loading />;
+}
 if (!profile) {
   return (
     <>
