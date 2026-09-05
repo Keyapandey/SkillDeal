@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './loading.css';
+import "../css/loading.css";
 
 const messages = [
   "Waking up the server... it's an early riser, just not that early 🌅",
