@@ -171,7 +171,7 @@ function Explore() {
   } catch (error) {
     alert(error.message);
   }
-}
+
 };
 
   return (
@@ -543,5 +543,5 @@ function Explore() {
   </>
   );
 
-
+}
 export default Explore;
